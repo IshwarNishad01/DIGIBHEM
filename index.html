@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaQuery.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <h1>Hotel Registration Form</h1>
+
+        <!--  customer Info -->
+        <form>
+          <div>
+            <p class="custom-heading">Customer Info</p>
+            <fieldset>
+              <div class="flex">
+                <label for="Cname">Customer Name</label>
+                <input type="text" name="Cname" required id="Cname" />
+              </div>
+              <div class="flex">
+                <label for="checkInDate">Check in Date</label>
+                <input
+                  type="date"
+                  name="checkInDate"
+                  required
+                  id="checkInDate"
+                />
+              </div>
+              <div class="flex">
+                <label for="totalDays">Total No of Days</label>
+                <input type="number" name="totalDays" required id="totalDays" />
+              </div>
+              <div class="flex">
+                <label for="totalPersons">Total No of Persons</label>
+                <input
+                  type="number"
+                  name="totalPersons"
+                  required
+                  id="totalPersons"
+                />
+              </div>
+            </fieldset>
+          </div>
+          <!--  room type -->
+          <div>
+            <p class="custom-heading">Select Room Type</p>
+
+            <div class="flex border custom-flex">
+              <figure>
+                <img src="img/delux room.jpg" alt="" />
+                <p>price : 2500/-</p>
+                <figcaption>
+                  <input type="radio" name="roomType" id="deluxRoom" />
+                  <label for="deluxRoom">Delux Room</label>
+                </figcaption>
+              </figure>
+              <figure>
+                <img src="img/suite room.jpg" alt="" />
+                <p>price : 4000/-</p>
+                <figcaption>
+                  <input type="radio" name="roomType" id="suiteRoom" />
+                  <label for="suiteRoom">Suite Room</label>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <!--  amenities -->
+          <div>
+            <p class="custom-heading">Select Amenities</p>
+            <div class="flex  custom-flex">
+              <figure>
+                <img src="img/ac.jpg" alt="" />
+                <p>price : 1000/-</p>
+                <figcaption>
+                  <input type="checkbox" name="AC" id="AC" />
+                  <label for="AC">AC</label>
+                </figcaption>
+              </figure>
+              <figure>
+                <img src="img/locker.jfif" alt="" />
+                <p>price : 1000/-</p>
+                <figcaption>
+                  <input type="checkbox" name="Locker" id="Locker" />
+                  <label for="Locker">Locker</label>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <!-- advance payment -->
+          <div>
+            <p class="custom-heading">Advance Amnount</p>
+            <div class="flex advance-flex">
+              <label for="advanceAmount">Advance Amnount</label>
+              <input
+                type="text"
+                name="advanceAmount"
+                required
+                id="advanceAmount"
+              />
+            </div>
+          </div>
+
+          <input
+            type="button"
+            onclick="printData()"
+            class="btn"
+            value="Register"
+            name=""
+            id=""
+          />
+        </form>
+        <!--  show form data -->
+        <div id="printData">
+          <div>
+            <p>Customer Name :</p>
+            <span id="nameValue"></span>
+          </div>
+          <div>
+            <p>Check In Date :</p>
+            <span id="checkInDateValue"></span>
+          </div>
+          <div>
+            <p>Total No of Days :</p>
+            <span id="totalDaysValue"></span>
+          </div>
+          <div>
+            <p>Total No of Persons :</p>
+            <span id="totalPersonsValue"></span>
+          </div>
+          <div>
+            <p>Room Type :</p>
+            <span id="roomType"></span>
+          </div>
+          <div>
+            <p>Amenities :</p>
+            <span id="amenti"></span>
+          </div>
+          <div>
+            <p>Extra Person Cost :</p>
+            <span id="extraCost"></span>
+          </div>
+          <div>
+            <p>Total Amnount :</p>
+            <span id="totalAmountValue"></span>
+          </div>
+          <div>
+            <p>Advance Amnount :</p>
+            <span id="advanceAmountValue"></span>
+          </div>
+          <div>
+            <p>Balance Amnount :</p>
+            <span id="balanceAmountValue"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

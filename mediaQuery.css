@@ -1,0 +1,41 @@
+@media only screen and (max-width: 600px) {
+  .box {
+    width: 100%;
+    padding: 10px;
+  }
+  .box h1 {
+    font-size: 22px;
+  }
+  .flex {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .custom-flex{
+    flex-direction: row;
+    gap: 50px;
+   
+    padding: 20px 0;
+  }
+  .custom-flex img{
+    height:90px;
+  }
+  fieldset label {
+    text-align: center;
+  }
+  fieldset label,fieldset
+  input {
+    width: 90%;
+  }
+  #printData {
+    padding: 0;
+  }
+  #printData div{
+    margin: 10px 20px;
+  }
+  #printData div p{
+    font-size: 16px;
+  }
+}
